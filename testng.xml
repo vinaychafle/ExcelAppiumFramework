@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="listeners.AnnotationsTransformer" />
+		<listener class-name="listeners.TestListener" />
+	</listeners>
+	
+	
+	<test thread-count="5" name="GeneralStore Test">
+		<classes>
+			<class name="excelConfigTest.ExcelTest" />
+			<class name="generalStore.ECommerceTest_01" />
+			<class name="generalStore.ECommerceTest_02" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test thread-count="5" name="Browser Test">
+		<classes>
+			<class name="browserTest.BrowserTest" />
+		</classes>
+	</test> <!-- Test -->
+
+
+	<test thread-count="5" name="ApiDemos Test">
+		<classes>
+			<class name="apiDemosTests.clickTest" />
+			<class name="apiDemosTests.DragDropTest" />
+			<class name="apiDemosTests.LongPressTest" />
+			<class name="apiDemosTests.MiscellaneousTest" />
+			<class name="apiDemosTests.ScrollTest" />
+			<class name="apiDemosTests.SwipeTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+	
+	<test thread-count="5" name="Stockapp Test">
+		<classes>
+			<class name="stockAppTests.Stockapp_LoginTest" />
+			<class name="stockAppTests.Stockapp_WatchlistTest" />
+			<class name="stockAppTests.Stock_BuySellTest" />			
+		</classes>
+	</test> <!-- Test -->
+
+
+</suite> <!-- Suite -->

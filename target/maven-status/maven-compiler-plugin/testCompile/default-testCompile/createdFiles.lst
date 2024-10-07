@@ -1,0 +1,8 @@
+generalStore\ECommerceTest_01.class
+appiumResources\AppiumBrowserBase.class
+testData\TestDataProviders.class
+appiumResources\AppiumBase.class
+listeners\TestListener.class
+listeners\AnnotationsTransformer.class
+excelConfigTest\ExcelTest.class
+generalStore\ECommerceTest_02.class

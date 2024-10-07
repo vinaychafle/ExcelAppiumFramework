@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">	       
+	<Properties>
+		<Property name="basePath">./results/logs</Property>
+	</Properties>
+	<Appenders>
+		<Routing name="MyRoutingAppender">
+			<Routes pattern="$${ctx:threadName}">
+				<Route>
+					<RollingFile name="File"
+						fileName="${basePath}/${ctx:threadName}.log"
+						filePattern="${basePath}/${ctx:threadName}-%d{yyyy-MM-dd}.log">						     
+						<PatternLayout
+							pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+						<SizeBasedTriggeringPolicy size="500KB" />					         
+					</RollingFile>
+				</Route>
+			</Routes>
+		</Routing>		   
+		<Console name="Console" target="SYSTEM_OUT">			     
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />			   
+		</Console>		 
+	</Appenders>
+	<Loggers>
+		<Root level="trace">			     
+			<AppenderRef ref="MyRoutingAppender" />			   
+		</Root>		 
+	</Loggers>
+</Configuration>

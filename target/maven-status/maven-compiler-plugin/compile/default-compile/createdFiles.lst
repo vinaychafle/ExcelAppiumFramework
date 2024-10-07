@@ -1,0 +1,9 @@
+appiumUtils\AppiumUtils$1.class
+appiumUtils\AppiumUtils.class
+generalStorePageObjects\CartPage.class
+resources\Constants.class
+externalResources\ExcelDataRead.class
+generalStorePageObjects\FormPage.class
+resources\ExtendReporterNG.class
+appiumUtils\AndroidActions.class
+generalStorePageObjects\ProductCatalog.class
